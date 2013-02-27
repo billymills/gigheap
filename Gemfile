@@ -6,6 +6,10 @@ gem 'bcrypt-ruby', '3.0.1'	#hash function to encrypt user passwords
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
+gem 'twitter'
+
+# gem to help keep developer keys hidden
+gem 'figaro'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
