@@ -7,6 +7,7 @@ gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'twitter'
+gem 'rails_autolink', '~> 1.0.5'
 
 # gem to help keep developer keys hidden
 gem 'figaro'

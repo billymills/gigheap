@@ -8,7 +8,11 @@ class PagesController < ApplicationController
 		config.oauth_token = Figaro.env.oauth_token
 		config.oauth_token_secret = Figaro.env.oauth_token_secret
 	end
-	@twitter_feed = Twitter.user_timeline("ladygaga").first.text
+
+	# pull three recent tweets from lady gaga
+	@tweets = Twitter.user_timeline("ladygaga", :count => 3, :result_type => "recent")
+	
+	# @twitter_feed = Twitter.user_timeline("ladygaga").first.text
 
   end
   	
