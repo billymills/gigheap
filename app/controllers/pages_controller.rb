@@ -10,7 +10,7 @@ class PagesController < ApplicationController
 	end
 
 	# pull three recent tweets from lady gaga
-	@tweets = Twitter.user_timeline("ladygaga", :count => 3, :result_type => "recent")
+	@tweets = Twitter.user_timeline("Mr_Hairston15", :count => 3, :result_type => "recent")
 	
 	# @twitter_feed = Twitter.user_timeline("ladygaga").first.text
 

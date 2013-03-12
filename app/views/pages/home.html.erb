@@ -1,14 +1,22 @@
-<div class="center">
-  <h1>gigheap.com | Home</h1>
-	<h2>
-		This is the home page for gigheap.com
-	</h2>
+<!-- took out hero-unit from below class-->
+
+<!-- outer container for main page -->
+<div id="outer_home">
+  <div class="center">
+    <h1>gigheap.com | Home</h1>
+	  <h2>
+		  This is the home page for gigheap.com
+	  </h2>
   
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+  </div>
+  <% @tweets.each do |t| %>
+  <li><%= auto_link(t.text) %></li>
+  <% end %>
+  <!-- <%= @twitter_feed %> -->
+  
+  <!-- remove rails image
+  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+  -->
 </div>
-<% @tweets.each do |t| %>
-<li><%= auto_link(t.text) %></li>
-<% end %>
-<!-- <%= @twitter_feed %> -->
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 

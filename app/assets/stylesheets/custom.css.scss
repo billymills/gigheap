@@ -9,6 +9,14 @@ $lightGray: #999;
 	box-sizing: border-box;
 }
 
+.navbar-inner {
+	background-color: #fff;
+	background-image: none;
+	background-repeat: no-repeat;
+	filter: none;
+}
+
+
 /* universal */
 
 html {
@@ -66,6 +74,7 @@ p {
 }
 
 /* header */
+
 
 #logo {
   font-family: 'Orbitron', sans-serif;
@@ -189,5 +198,9 @@ input {
 
 #top_navbar {
   font-family: 'Orbitron', sans-serif; 
+}
+
+#outer_home {
+
 }
 
