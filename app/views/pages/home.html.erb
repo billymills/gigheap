@@ -1,18 +1,23 @@
-<!-- took out hero-unit from below class-->
+<!-- took out hero-unit from below class -->
 
 <!-- outer container for main page -->
-<div id="outer_home">
-  <div class="center">
-    <h1>gigheap.com | Home</h1>
-	  <h2>
+<div id="outer_home" class="row-fluid">
+	<div class="span5 offset1">
+    	<h1>gigheap.com | Home</h1>
+	  	<h2>
 		  This is the home page for gigheap.com
-	  </h2>
+	  	</h2>
   
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-  </div>
-  <% @tweets.each do |t| %>
-  <li><%= auto_link(t.text) %></li>
-  <% end %>
+    	<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+  	</div>
+  
+  	<div class="span5 offset1">
+  		<% @tweets.each do |t| %>
+  			<li><%= auto_link(t.text) %></li>
+  		<% end %>
+	</div>
+
+
   <!-- <%= @twitter_feed %> -->
   
   <!-- remove rails image
