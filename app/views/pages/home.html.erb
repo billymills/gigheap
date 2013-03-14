@@ -11,7 +11,7 @@
     	<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
   	</div>
   
-  	<div class="span5 offset1">
+  	<div class="span5 offset1" id="tweet_div">
   		<% @tweets.each do |t| %>
   			<li><%= auto_link(t.text) %></li>
   		<% end %>
