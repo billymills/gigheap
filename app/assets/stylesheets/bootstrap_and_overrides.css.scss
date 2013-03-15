@@ -24,6 +24,10 @@ $lightGray: #999;
 
 #tweet_div, #jobs_div, #events_div {
 	border: 1px solid black;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
 }
 
 /* universal */
