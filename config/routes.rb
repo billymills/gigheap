@@ -1,11 +1,16 @@
 Gigheap::Application.routes.draw do
-	resources :users
-	resources :sessions, only: [:new, :create, :destroy]
-	match '/signup', to: 'users#new'  # signup_path
-	match '/signin', to: 'sessions#new'  # signin_path
-	match '/signout', to: 'sessions#destroy', via: :delete	
-  	match '/contact', to: 'pages#contact'  # contact_path
+  	get "jobs/new"
 
-  root :to => 'pages#home'
+	resources :users
+	resources :sessions, 	only: [:new, :create, :destroy]
+	match '/signup', 		to: 'users#new'  # signup_path
+	match '/signin', 		to: 'sessions#new'  # signin_path
+	match '/signout', 		to: 'sessions#destroy', via: :delete	
+  	match '/contact', 		to: 'pages#contact'  # contact_path
+
+	#route for posting new job page
+	match '/postjob', 		to: 'jobs#new'
+
+  	root :to => 'pages#home'
 
 end
