@@ -12,10 +12,10 @@ class PagesController < ApplicationController
 	end
 
 	# pull three recent tweets from lady gaga
-	# @tweets = Twitter.user_timeline("Mr_Hairston15", :count => 5, :result_type => "recent")
+	@tweets = Twitter.user_timeline("Mr_Hairston15", :count => 5, :result_type => "recent")
 
 	# attempting to pull tweets with search terms
-	@tweets = Twitter.search("asheville technology jobs", :count => 10).results
+	# @tweets = Twitter.search("asheville technology jobs", :count => 10).results
 	
 	# @twitter_feed = Twitter.user_timeline("ladygaga").first.text
 
