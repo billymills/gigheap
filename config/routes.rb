@@ -1,5 +1,5 @@
 Gigheap::Application.routes.draw do
-  	get "jobs/new"
+  	# get "jobs/new"
 
 	resources :users
 	resources :sessions, 	only: [:new, :create, :destroy]
@@ -9,6 +9,7 @@ Gigheap::Application.routes.draw do
   	match '/contact', 		to: 'pages#contact'  # contact_path
 
 	#route for posting new job page
+	resources :jobs
 	match '/postjob', 		to: 'jobs#new'
 
   	root :to => 'pages#home'

@@ -9,4 +9,11 @@ FactoryGirl.define do
 			admin true
 		end
 	end
+
+	factory :job do
+		title		"example job"
+		company 	"example company"
+		location 	"example location"
+	end
+
 end
