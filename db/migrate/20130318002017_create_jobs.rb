@@ -1,8 +1,8 @@
 class CreateJobs < ActiveRecord::Migration
   def change
-    create_table :jobs do |t|
+    create_table :Jobs do |t|
       t.string :title
-      t.string :company
+      t.string :compay
       t.string :location
 
       t.timestamps
