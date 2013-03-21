@@ -9,6 +9,10 @@ class JobsController < ApplicationController
   	end
 
 	def create
+  		require "rubygems"
+		require "twitter"
+		require "tweetstream"
+	
 
 		# the following line is equivalent to
 		# Job.new(title: "example", company: "example", location: "example"
@@ -19,6 +23,18 @@ class JobsController < ApplicationController
 			flash[:success] = "This submission has just been tweeted!"
 			redirect_to @job
 			# I think this is where I should send the tweet from
+
+			Twitter.configure do |config|
+				config.consumer_key = Figaro.env.consumer_key
+				config.consumer_secret = Figaro.env.consumer_secret
+				config.oauth_token = Figaro.env.oauth_token
+				config.oauth_token_secret = Figaro.env.oauth_token_secret
+			end
+
+			# pull three recent tweets from lady gaga
+			# @tweets = Twitter.user_timeline("Mr_Hairston15", :count => 5, :result_type => "recent")
+			client = Twitter::Client.new
+			client.update('hello from gigheap')
 		else
 			render 'new'
 		end
