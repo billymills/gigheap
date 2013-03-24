@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+	before_filter :signed_in_user, only:[:create]
   	def show
   		# the following retrieves the user from the database
   		@job = Job.find(params[:id])
@@ -39,4 +40,10 @@ class JobsController < ApplicationController
 			render 'new'
 		end
 	end
+
+	private
+		def signed_in_user
+			store_location
+			redirect_to signin_url, notice: "Please sign in." unless signed_in?
+		end
 end
