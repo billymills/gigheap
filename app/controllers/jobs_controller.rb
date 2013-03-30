@@ -9,6 +9,10 @@ class JobsController < ApplicationController
 		@job = Job.new
   	end
 
+	def index
+		@jobs = Job.paginate(page: params[:page])
+	end
+
 	def create
   		require "rubygems"
 		require "twitter"
