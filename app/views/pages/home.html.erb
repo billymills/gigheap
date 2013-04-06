@@ -21,22 +21,25 @@
   	
   	<div class="row" id="info_div">
 		<table>
-			<tr>
-			
-		<td>
-  			<% @tweets.each do |t| %>
-  				<li><%= auto_link(t.text) %></li>
-  			<% end %>
-		</td>
-		<td>
-			<p>recent jobs</p>
-		</td>
-		<!--
-		<div id="events_div" class="span4">
-			<p>recent events</p>
-		</div>
-		-->
-		</tr>
+			<tr>			
+				<td>
+					<div class="content_div">
+  					<% @tweets.each do |t| %>
+  					<li><%= auto_link(t.text) %></li>
+  					<% end %>
+					</div>
+				</td>
+				<td>
+					<div class="content_div">
+					<p>recent jobs</p>
+					</div>
+				</td>
+				<!--
+				<div id="events_div" class="span4">
+				<p>recent events</p>
+				</div>
+				-->
+			</tr>
 		</table>
 	</div>
 

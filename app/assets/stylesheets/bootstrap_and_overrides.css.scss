@@ -13,18 +13,33 @@ $lightGray: #999;
 
 /* my bootstrap overrides */
 
+.content_div {
+	height: 220px;
+	width: 425px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: #d8d8d8;
+	-webkit-box-shadow: 5px 5px 5px #828282;
+	-moz-box-shadow: 5px 5px 5px #828282;
+	box-shadow: 5px 5px 5px #828282;	
+}
+
 table {
-	border: none;
+	/* border: 1px solid black; */
+	border-collapse: separate;
+	border-spacing: 5px;
+
 }
 
 td {
-	width: 375px;
+	width: 450px;
 	height: 225px;
 	padding: 10px;
 }
 
 #info_div {
-	width: 750px;
+	width: 900px;
 	margin-right: auto;
 	margin-left: auto;
 }
