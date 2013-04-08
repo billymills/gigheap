@@ -35,6 +35,8 @@ class PagesController < ApplicationController
 	#	client.stop if @tweets.size >=5
 	# end
 	
+	# fetch job info for front page here
+	@jobs = Job.all
 
   end
   	

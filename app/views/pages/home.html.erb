@@ -24,14 +24,17 @@
 			<tr>			
 				<td>
 					<div class="content_div">
-  					<% @tweets.each do |t| %>
-  					<li><%= auto_link(t.text) %></li>
-  					<% end %>
+  						<% @tweets.each do |t| %>
+  							<li><%= auto_link(t.text) %></li>
+  						<% end %>
 					</div>
 				</td>
 				<td>
 					<div class="content_div">
-					<p>recent jobs</p>
+						<!-- <p>recent jobs</p> -->
+						<% @jobs.each do |j| %>
+							<li><%= j.title %></li>
+						<% end %>
 					</div>
 				</td>
 				<!--
