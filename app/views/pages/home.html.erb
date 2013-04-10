@@ -7,7 +7,7 @@
     		<h1 class="center">gigheap</h1>
 	  		<h2 class="center">Welcome to gigheap!</h2>
   
-    		<%= link_to "Sign up", signup_path, class: "btn btn-small btn-primary" %>
+    		<%= link_to "Sign up", signup_path, class: "btn btn-small btn-danger" %>
 		
 			<!-- twitter link follows -->
   			<a href="https://twitter.com/heaptest" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @heaptest</a>
@@ -33,7 +33,7 @@
 					<div class="content_div">
 						<!-- <p>recent jobs</p> -->
 						<% @jobs.each do |j| %>
-							<li><%= j.title %></li>
+							<li><%= link_to j.title, j %> </li>
 						<% end %>
 					</div>
 				</td>
