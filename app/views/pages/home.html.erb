@@ -19,31 +19,21 @@
 		</div>
 	</div>
   	
-  	<div class="row" id="info_div">
-		<table>
-			<tr>			
-				<td>
-					<div class="content_div">
-  						<% @tweets.each do |t| %>
-  							<li><%= auto_link(t.text) %></li>
-  						<% end %>
-					</div>
-				</td>
-				<td>
-					<div class="content_div">
-						<!-- <p>recent jobs</p> -->
-						<% @jobs.each do |j| %>
-							<li><%= link_to j.title, j %> </li>
-						<% end %>
-					</div>
-				</td>
-				<!--
-				<div id="events_div" class="span4">
-				<p>recent events</p>
-				</div>
-				-->
-			</tr>
-		</table>
+  	<div id="info_div" class="container">
+		<div class="row-fluid">
+			<div class="content_div span6">
+  				<% @tweets.each do |t| %>
+  					<li><%= auto_link(t.text) %></li>
+  				<% end %>
+			</div>
+					
+			<div class="content_div span6">
+				<!-- <p>recent jobs</p> -->
+				<% @jobs.each do |j| %>
+					<li><%= link_to j.title, j %> </li>
+				<% end %>
+			</div>
+		</div>
 	</div>
 
   <!-- <%= @twitter_feed %> -->  

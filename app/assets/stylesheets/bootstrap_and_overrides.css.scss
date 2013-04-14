@@ -1,5 +1,3 @@
-/* $navbarBackground: white; */
-/* $navbarHeight: 100px; */
 @import "bootstrap";
 
 /* mixins, variables, etc. */
@@ -13,9 +11,10 @@ $lightGray: #999;
 
 /* my bootstrap overrides */
 
+/* css for two main content divs on home page */
 .content_div {
 	height: 220px;
-	width: 425px;
+	width: 400px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	padding: 5px;
@@ -25,23 +24,10 @@ $lightGray: #999;
 	box-shadow: 5px 5px 5px #828282;	
 }
 
-table {
-	/* border: 1px solid black; */
-	border-collapse: separate;
-	border-spacing: 5px;
-
-}
-
-td {
-	width: 450px;
-	height: 225px;
-	padding: 10px;
-}
-
 #info_div {
-	width: 900px;
-	margin-right: auto;
-	margin-left: auto;
+	width: 960px;
+	margin-left: -10px;
+	margin-top: 10px;
 }
 
 #home_header_info {
@@ -57,9 +43,7 @@ td {
 }
 
 #logo {
-	font-family: 'Abril Fatface', cursive;
-  /*font-family: 'Quicksand', sans-serif;*/
-  /*font-family: 'Orbitron', sans-serif;*/
+	font-family: 'Patua One', cursive;
   float: left;
   margin-right: 10px;
   margin-top: 5px;
@@ -75,17 +59,18 @@ td {
   font-weight: bold;
   height: 40px;
   &:hover {
-    color: #b40431;
+    color: #d8d8d8;
     text-decoration: none;
 	/*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
   }
 }
 
+/* css to make navbar float */
 .navbar {
 	width: 960px;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 10px;
+	margin-top: 10px;	
 }
 
 /* change color of navbar links and help center vertically */
@@ -94,6 +79,10 @@ td {
 	text-shadow: none;
 	line-height: 40px;
 	height: 40px;
+  	&:hover {
+    	color: #d8d8d8;
+    	text-decoration: none;
+	}
 }
 
 /* change style of top navbar */
@@ -101,18 +90,16 @@ td {
 	/*font-family: 'Abril Fatface', cursive;*/
 	/*font-family: 'Quicksand', sans-serif;*/
   	/*font-family: 'Orbitron', sans-serif;*/ 
-	/* background-color: #c3c3c3; */
-	/*-webkit-box-shadow: 0 2px 4px #828282;*/
 	background-image: -webkit-linear-gradient(bottom, #000000, #424242);
 	background-repeat: repeat-x;
-
-/*
-	background-image: none;
-	background-repeat: no-repeat; 
-*/
-
 	filter: none;
 	height: 60px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 5px 5px 5px #828282;
+	-moz-box-shadow: 5px 5px 5px #828282;
+	box-shadow: 5px 5px 5px #828282;	
 }
 
 
