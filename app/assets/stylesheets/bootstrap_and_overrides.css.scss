@@ -143,7 +143,9 @@ html {
 
 /* body padding provides clearance for top nav bar */
 body {
- padding-top: 100px; 
+ 	padding-top: 100px; 
+	background-image:url('wavegrid.png');
+	background-repeat: repeat;
 }
 
 section {
