@@ -81,16 +81,17 @@ td {
   }
 }
 
-
-/* the following was done to change color of navbar links */
-.navbar-inverse .brand, .navbar-inverse .nav > li > a {
-	color: #d8d8d8;
-	text-shadow: none;
-	font-size: 16px;
+.navbar {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
 }
 
-/* following was done to center nav bar links */
-.nav.pull-right > li > a {
+/* change color of navbar links and help center vertically */
+.navbar .nav > li > a {
+	color: white;
+	text-shadow: none;
 	line-height: 40px;
 	height: 40px;
 }
