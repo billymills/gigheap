@@ -1,21 +1,22 @@
 <% provide(:title, 'Post Job') %>
-<h1>Post Job</h1>
-<p>Find me in app/views/jobs/new.html.erb</p>
 
-<div class="row">
-	<div class="span6 offset3">
-		<%= form_for(@job) do |f| %>
-			<%= render 'shared/job_error_messages' %>
-			<%= f.label :title %>
-			<%= f.text_field :title %>
+<div class="container">
+	<h2 class="center">Post Job</h2>
+		<div class="row">
+			<div class="span6 offset3">
+				<%= form_for(@job) do |f| %>
+					<%= render 'shared/job_error_messages' %>
+					<%= f.label :title %>
+					<%= f.text_field :title %>
 
-			<%= f.label :company %>
-			<%= f.text_field :company %>
+					<%= f.label :company %>
+					<%= f.text_field :company %>
 
-			<%= f.label :location %>
-			<%= f.text_field :location %>
+					<%= f.label :location %>
+					<%= f.text_field :location %>
 
-			<%= f.submit "Create new listing", class: "btn btn-large brn-primary" %>
-		<% end %>
+					<%= f.submit "Create new listing", class: "btn btn-small btn-warning" %>
+				<% end %>
+		</div>
 	</div>
 </div>
