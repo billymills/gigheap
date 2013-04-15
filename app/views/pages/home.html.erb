@@ -1,13 +1,10 @@
-<!-- took out hero-unit from below class -->
-
 <!-- outer container for main page -->
 <div class="container">
 	<div class="row">
 		<div id="home_header_info">
-    		<h1 class="center">gigheap</h1>
 	  		<h2 class="center">Welcome to gigheap!</h2>
-  
-    		<%= link_to "Sign up", signup_path, class: "btn btn-small btn-danger" %>
+			<p class="sub_par">Gigheap is resource for Asheville tech job seekers.  There are couple of ways to make gigheap work for you...</p>		
+			<!-- <%= link_to "Sign up", signup_path, class: "btn btn-small btn-warning" %> -->
 		
 			<!-- twitter link follows -->
   			<a href="https://twitter.com/heaptest" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @heaptest</a>
@@ -18,19 +15,34 @@
 			<% end %>
 		</div>
 	</div>
-  	
+
+ 	<div class="container">
+		<div class="row-fluid">
+			<div class="span6 instructions">
+				<p>Employers:</p>
+				<p class="sub_par"><%= link_to "Sign up", signup_path %> and have your job listing tweeted to prospective employees immediately!</p>
+			</div>
+			<div class="span6 instructions">
+				<p>Jobseekers:</p>
+				<p class="sub_par">Follow gigheap and receive a tweet about new jobs as soon as they are submitted!</p>
+			</div>
+		</div>
+	</div> 
+	
   	<div id="info_div" class="container">
 		<div class="row-fluid">
 			<div class="content_div span6">
+				<p class="instructions">Recent Job Tweets:</p>
   				<% @tweets.each do |t| %>
-  					<li><%= auto_link(t.text) %></li>
+					<p class="sub_par"><i class="icon-chevron-right"></i><%= auto_link(t.text) %></p>
   				<% end %>
 			</div>
 					
 			<div class="content_div span6">
 				<!-- <p>recent jobs</p> -->
+				<p class="instructions">Recent Job Listings:</p>
 				<% @jobs.each do |j| %>
-					<li><%= link_to j.title, j %> </li>
+					<p class="sub_par"><i class="icon-chevron-right"></i><%= link_to j.title, j %></p>
 				<% end %>
 			</div>
 		</div>
