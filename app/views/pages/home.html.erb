@@ -1,19 +1,17 @@
 <!-- outer container for main page -->
 <div class="container">
-	<div class="row">
-		<div id="home_header_info">
-	  		<h2 class="center">Welcome to gigheap!</h2>
-			<p class="sub_par">Gigheap is resource for Asheville tech job seekers.  There are couple of ways to make gigheap work for you...</p>		
-			<!-- <%= link_to "Sign up", signup_path, class: "btn btn-small btn-warning" %> -->
+	<div class="row" id="welcome_div">
+	  	<h2>Welcome to gigheap!</h2>
+		<p class="sub_par">Gigheap is resource for Asheville tech job seekers.  There are couple of ways to make gigheap work for you...</p>		
+		<!-- <%= link_to "Sign up", signup_path, class: "btn btn-small btn-warning" %> -->
 		
-			<!-- twitter link follows -->
-  			<a href="https://twitter.com/heaptest" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @heaptest</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
+		<!-- twitter link follows -->
+  		<a href="https://twitter.com/heaptest" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @heaptest</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
 		
-			<% if signed_in? %>
-			<%= link_to "Post Job", postjob_path, class: "btn btn-small btn-primary" %>
-			<% end %>
-		</div>
+		<% if signed_in? %>
+		<%= link_to "Post Job", postjob_path, class: "btn btn-small btn-primary" %>
+		<% end %>
 	</div>
 
  	<div class="container">

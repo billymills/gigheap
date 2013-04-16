@@ -25,6 +25,19 @@ $subTextStyle: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 /* my bootstrap overrides */
 
+#welcome_div {
+	width: 958px;
+	margin-left: -10px;
+	text-align: left;
+	background-image: url('AshevilleSkyline.png');
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-position: center center;
+	opacity: 1;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
 /* css for two main content divs on home page */
 
 .instructions {
@@ -59,12 +72,6 @@ $subTextStyle: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	margin-top: 10px;
 }
 
-#home_header_info {
-	margin-right: auto;
-	margin-left: auto;
-	text-align: center;
-	width: 50%;
-}
 
 /* the following was done to center logo vertically */
 #logo {
