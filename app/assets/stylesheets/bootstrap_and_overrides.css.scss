@@ -29,13 +29,15 @@ $subTextStyle: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	width: 958px;
 	margin-left: -10px;
 	text-align: left;
-	background-image: url('AshevilleSkyline.png');
+	background-image: url('AshevilleSkyline.jpeg');
 	background-repeat: no-repeat;
 	background-size: cover; 
-	background-position: center center;
-	opacity: 1;
+	background-position: center center;;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	-webkit-box-shadow: 5px 5px 5px #828282;
+	-moz-box-shadow: 5px 5px 5px #828282;
+	box-shadow: 5px 5px 5px #828282;	
 }
 
 /* css for two main content divs on home page */

@@ -1,6 +1,7 @@
 <!-- outer container for main page -->
 <div class="container">
 	<div class="row" id="welcome_div">
+	
 	  	<h2>Welcome to gigheap!</h2>
 		<p class="sub_par">Gigheap is resource for Asheville tech job seekers.  There are couple of ways to make gigheap work for you...</p>		
 		<!-- <%= link_to "Sign up", signup_path, class: "btn btn-small btn-warning" %> -->
@@ -12,6 +13,7 @@
 		<% if signed_in? %>
 		<%= link_to "Post Job", postjob_path, class: "btn btn-small btn-primary" %>
 		<% end %>
+
 	</div>
 
  	<div class="container">
