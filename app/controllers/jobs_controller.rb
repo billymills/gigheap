@@ -39,7 +39,7 @@ class JobsController < ApplicationController
 			# pull three recent tweets from lady gaga
 			# @tweets = Twitter.user_timeline("Mr_Hairston15", :count => 5, :result_type => "recent")
 			client = Twitter::Client.new
-			client.update('hello from gigheap')
+			client.update('This is a test')
 		else
 			render 'new'
 		end
