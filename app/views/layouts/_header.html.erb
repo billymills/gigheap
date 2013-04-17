@@ -1,10 +1,9 @@
-
 <!-- <header class="navbar navbar-fixed-top navbar-inverse"> -->
 <header class="navbar navbar-fixed-top">
-  <div class="navbar-inner" id="top_navbar">
-    <div class="container">
+<div class="navbar-inner" id="top_navbar">
+<div class="container">
       <%= link_to "gigheap", root_path, id: "logo" %>
-      <nav>
+	  <nav>
         <ul class="nav pull-right">
           <li><%= link_to "home", root_path %></li>
           <% if signed_in? %>
@@ -28,4 +27,3 @@
     </div>
   </div>
 </header>
-
