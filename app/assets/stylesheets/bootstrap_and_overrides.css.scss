@@ -24,10 +24,25 @@ $subTextStyle: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* my bootstrap overrides */
+.welcome_inner {
+	padding: 10px;
+	p {
+		margin-top: 0px;
+		font-family: $textStyle;
+	}
+	h2 {
+		margin-bottom: 5px;
+	}
+}
+
+#ghlogo {
+	margin-top: 25px;
+}
 
 #welcome_div {
 	width: 958px;
 	margin-left: -10px;
+	margin-bottom: 30px;
 	text-align: left;
 	background-image: url('AshevilleSkyline.jpeg');
 	background-repeat: no-repeat;

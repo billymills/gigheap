@@ -1,33 +1,30 @@
 <!-- outer container for main page -->
 <div class="container">
 	<div class="row" id="welcome_div">
-	
-	  	<h2>Welcome to gigheap!</h2>
-		<p class="sub_par">Gigheap is resource for Asheville tech job seekers.  There are couple of ways to make gigheap work for you...</p>		
-		<!-- <%= link_to "Sign up", signup_path, class: "btn btn-small btn-warning" %> -->
+		<div class="welcome_inner span7">
+			<% if !signed_in? %>
+	  			<h2>Welcome to gigheap!</h2>
+				<p>Gigheap is a career resource for the Asheville technology community.  Employers <%= link_to "sign up", signup_path %> now and start listing jobs.  Followers of the site will recieve the listings immmediately. Job-seekers, follow us to get the latest updates!</p>		
+				<!-- <%= link_to "Sign up", signup_path, class: "btn btn-small btn-warning" %> -->
 		
-		<!-- twitter link follows -->
-  		<a href="https://twitter.com/heaptest" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @heaptest</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
+				<!-- twitter link follows -->
+  				<a href="https://twitter.com/heaptest" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @heaptest</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<% end %>
+		</div>	
 		
-		<% if signed_in? %>
-		<%= link_to "Post Job", postjob_path, class: "btn btn-small btn-primary" %>
-		<% end %>
-
-	</div>
-
- 	<div class="container">
-		<div class="row-fluid">
-			<div class="span6 instructions">
-				<p>Employers:</p>
-				<p class="sub_par"><%= link_to "Sign up", signup_path %> and have your job listing tweeted to prospective employees immediately!</p>
-			</div>
-			<div class="span6 instructions">
-				<p>Jobseekers:</p>
-				<p class="sub_par">Follow gigheap and receive a tweet about new jobs as soon as they are submitted!</p>
+		<div class="span2 offset2" id="ghlogo">
+			<div>
+			<%= link_to image_tag("logo.png"), root_path %>
 			</div>
 		</div>
-	</div> 
+			
+		<% if signed_in? %>
+			<%= link_to "Post Job", postjob_path, class: "btn btn-small btn-primary" %>
+		<% end %>
+	</div>
+
+
 	
   	<div id="info_div" class="container">
 		<div class="row-fluid">
