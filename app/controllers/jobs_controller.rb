@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
 	before_filter :signed_in_user, only:[:create]
   	def show
-  		# the following retrieves the user from the database
+  		# the following retrieves the job from the database
   		@job = Job.find(params[:id])
 	end
   
@@ -18,7 +18,6 @@ class JobsController < ApplicationController
 		require "twitter"
 		require "tweetstream"
 	
-
 		# the following line is equivalent to
 		# Job.new(title: "example", company: "example", location: "example"
 		# it's a hash of hashes
@@ -39,7 +38,7 @@ class JobsController < ApplicationController
 			# pull three recent tweets from lady gaga
 			# @tweets = Twitter.user_timeline("Mr_Hairston15", :count => 5, :result_type => "recent")
 			client = Twitter::Client.new
-			client.update('sample tweet  www.unca.edu')
+			client.update('A ' +@job.title+' position has just been posted at Gigheap, check it out! ' +@job.link)
 		else
 			render 'new'
 		end
