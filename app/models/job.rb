@@ -18,5 +18,5 @@ class Job < ActiveRecord::Base
 	validates :title, presence: true, length: { maximum: 50 }
 	validates :company, presence: true, length: { maximum: 50 }
 	validates :location, presence: true, length: { maximum: 50 }
-	validates :link, presence: true, length: {maximum: 50 }
+	validates :link, presence: true, length: {maximum: 255 }
 end

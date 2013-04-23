@@ -24,6 +24,12 @@ $subTextStyle: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* my bootstrap overrides */
+
+#welcome_back {
+	padding-top: 35px;
+	font-size: 18px;
+}
+
 .welcome_inner {
 	padding: 10px;
 	p {
@@ -41,6 +47,7 @@ $subTextStyle: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 #welcome_div {
 	width: 958px;
+	height: 190px;
 	margin-left: -10px;
 	margin-bottom: 30px;
 	text-align: left;
@@ -72,7 +79,7 @@ $subTextStyle: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .content_div {
-	height: 280px;
+	height: 300px;
 	width: 400px;
 	/* -moz-border-radius: 5px;i */
 	/* border-radius: 5px; */
